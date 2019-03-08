@@ -15,7 +15,8 @@ vcpkg_configure_cmake(
     -DBUILD_PYTHON_WRAPPER=OFF
     -DBoost_INCLUDE_DIRS=${CURRENT_PACKAGES_DIR}/include/boost
     -DProtobuf_INCLUDE_DIR=${CURRENT_PACKAGES_DIR}/protobuf/google/protobuf
-    -DProtobuf_LIBRARIES=${CURRENT_PACKAGES_DIR}/lib/libprotobuf.a
+    -DProtobuf_LIBRARIES=${CURRENT_PACKAGES_DIR}/lib
+    -DCURL_LIBRARY_PATH=${CURRENT_PACKAGES_DIR}/lib
 )
 
 vcpkg_install_cmake()
