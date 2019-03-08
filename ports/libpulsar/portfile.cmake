@@ -10,13 +10,14 @@ vcpkg_from_github(
 
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}/pulsar-client-cpp
+    PREFER_NINJA
     OPTIONS
-    -DBUILD_TESTS=OFF 
-    -DBUILD_PYTHON_WRAPPER=OFF
-    -DBoost_INCLUDE_DIRS=${CURRENT_PACKAGES_DIR}/include/boost
-    -DProtobuf_INCLUDE_DIR=${CURRENT_PACKAGES_DIR}/protobuf/google/protobuf
-    -DProtobuf_LIBRARIES=${CURRENT_PACKAGES_DIR}/lib
-    -DCURL_LIBRARY_PATH=${CURRENT_PACKAGES_DIR}/lib
+        -DBUILD_TESTS=OFF 
+        -DBUILD_PYTHON_WRAPPER=OFF
+        # -DBoost_INCLUDE_DIRS=${CURRENT_INSTALLED_DIR}/include
+        # -DProtobuf_INCLUDE_DIR=${CURRENT_INSTALLED_DIR}/include
+        # -DProtobuf_LIBRARIES=${CURRENT_INSTALLED_DIR}/lib
+        # -DCURL_LIBRARY_PATH=${CURRENT_INSTALLED_DIR}/lib
 )
 
 vcpkg_install_cmake()
