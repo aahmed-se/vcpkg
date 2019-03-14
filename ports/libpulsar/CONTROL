@@ -1,4 +1,4 @@
 Source: libpulsar
-Version: 2.3.0
+Version: 2.4.0
 Build-Depends: jsoncpp, openssl, zstd, boost-regex, boost-system, boost-program-options, curl, protobuf
 Description: Pulsar cpp library

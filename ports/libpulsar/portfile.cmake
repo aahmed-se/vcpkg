@@ -14,9 +14,14 @@ vcpkg_configure_cmake(
         -DBUILD_PYTHON_WRAPPER=OFF
         # -DLINK_STATIC=ON
         -DLIB_NAME=pular
-        -DLIBRARY_VERSION=2.3.0
+        -DLIBRARY_VERSION=2.4.0
 )
 
 
-#vcpkg_build_cmake()
+# vcpkg_build_cmake()
+
 vcpkg_install_cmake()
+# vcpkg_fixup_cmake_targets()
+file(WRITE ${CURRENT_PACKAGES_DIR}/share/libpulsar/copyright "Apache Pulsar.\nhttps://pulsar.apache.org/\n")
+file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/include)
+vcpkg_copy_pdbs()
