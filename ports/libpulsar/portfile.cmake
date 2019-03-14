@@ -3,8 +3,8 @@ include(vcpkg_common_functions)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO aahmed-se/incubator-pulsar
-    REF 076d6f7dbec6c4c0f4aa4d74beaa5c9c8025e45a
-    SHA512 64aea7f8d2d215d1665c41b74f77c4a2e97150fa82c0fdc671c7ebbe69217a1bb48b1d5b9820e342a7ace7daa02d40db891963f8a78d7a0817d7a5c50a3d053e
+    REF proto2
+    SHA512 b1dc98b3a4f82d859648ad322c93d01ee163e2c2376a6a64603cf22dea38a99392f8b7b5e23285680410c229f65ff84f1e844bc66459c4337c5cab067eca1535
 )
 
 vcpkg_configure_cmake(
